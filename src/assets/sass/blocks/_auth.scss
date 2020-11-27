@@ -1,0 +1,272 @@
+.form__container {
+    display: flex;
+    width: 410px;
+}
+
+.auth {
+    position: relative;
+    width: 375px;
+    text-align: center;
+    background-color: white;
+
+    &__logo {
+        margin: 15px 0;
+    }
+
+    &__text {
+        margin: 0 30px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #666;
+    
+        &-pink {
+            color: #e71e6c;
+        }
+    }
+
+    &__input {
+        padding: 0 38px;
+        margin-bottom: 10px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 3px 0;
+
+        &-user {
+            padding: 12px 15px;
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid rgb(230, 227, 227);
+            outline: none;
+            
+            &::placeholder {
+                font-size: 13px;
+                font-weight: 300;
+                color:  rgb(187, 186, 186);
+            }
+        }
+
+        &-btn {
+            margin: 12px 40px 35px 40px;
+            height: 45px;
+            background-color: #e71e6c;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 20px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__forget {
+        color: #666;
+    }
+
+    &__enter {
+        margin-top: 70px;   
+        font-style: italic;
+
+        &-register {
+            color: #e71e6c;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 3%;
+        left: -12%;
+    }
+
+    &__policy {
+        font-size: 12px;
+        font-weight: 300;
+        color: rgb(187, 186, 186);
+
+        &-doc {
+            color: rgb(187, 186, 186);
+        }
+    }
+
+    &__logo {
+        &-icon {
+            display: none;
+        }
+    }
+}
+
+.mark {
+    width: 18px;
+    height: 18px;
+    fill: #fdc3d9;
+}
+
+.check {
+    margin-top: 20px;
+
+    &__block {
+        position: relative;
+        display: flex;
+        margin-bottom: 12px;
+
+        &-mark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: 40px;
+            width: 18px;
+            height: 18px;
+        }
+
+        &-text {
+            margin-left: 65px;
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+        }
+    }
+}
+
+.fail {
+    position: relative;
+    border-color: red;
+    margin-bottom: 10px;
+
+    &__comment {
+        position: absolute;
+        bottom: 48.3%;
+        right: 8%;
+        font-size: 12px;
+        font-weight: 300;
+        color: red;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.hideCheck {
+    display: none;
+}
+
+@media(max-width: 755px) {
+    .form__container {
+        display: none;
+    }
+
+    .hideCheck {
+        display: block;
+    }
+
+    .hideCheckFirst {
+        display: none;
+    }
+
+    .check {
+        position: relative;
+        margin-top: 20px;
+
+        &__block {
+            &-text {
+                margin-left: 45px;
+            }
+
+            &-mark {
+                margin-left: 20px;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -35px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #eeeff5;
+        }
+    }
+
+    .fail__comment {
+        display: none;
+    }
+
+    .auth {
+        max-width: 340px;
+        width: 100%;
+
+        &__arrow {
+            display: none;
+        }
+
+        &__logo {
+            margin: 20px 0 0;
+        }
+
+        &__input {
+            padding: 0 32px;
+            margin-bottom: -4px;
+        }
+
+        &__form {
+            &-btn {
+                margin: 10px 32px 28px;
+            }
+        }
+
+        &__enter {
+            margin-top: 28px;
+        }
+
+        &__logo {
+            &-icon {
+                display: inline;
+                margin-right: 15px;
+                height: 40px;
+                width: 40px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__app {
+            &-title {
+                font-style: italic;
+                color: gray;
+                font-size: 16px;
+                margin-top: 70px;
+            }
+
+            &-store {
+                width: 130px;
+                height: auto;
+            }
+
+            &-apps {
+                margin: 20px 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            &-store {
+                &:first-child{
+                    margin-right: 3px;
+                }
+            }
+
+            &-description {
+                font-size: 16px;
+                color: gray;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

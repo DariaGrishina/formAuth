@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" type="text/html" href="assets/js/slick/slick.css">
+    <link rel="stylesheet" type="text/html" href="assets/js/slick/slick-theme.css">
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+</head>
+<body>
+    <svg style="display: none;">
+        <symbol id="check" viewBox="0 0 512 512">
+            <g>
+                <g>
+                    <path d="M437.019,74.98C388.667,26.629,324.38,0,256,0C187.619,0,123.331,26.629,74.98,74.98C26.628,123.332,0,187.62,0,256
+                        s26.628,132.667,74.98,181.019C123.332,485.371,187.619,512,256,512c68.38,0,132.667-26.629,181.019-74.981
+                        C485.371,388.667,512,324.38,512,256S485.371,123.333,437.019,74.98z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30
+                        s226,101.383,226,226S380.617,482,256,482z"/>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path d="M378.305,173.859c-5.857-5.856-15.355-5.856-21.212,0.001L224.634,306.319l-69.727-69.727
+                        c-5.857-5.857-15.355-5.857-21.213,0c-5.858,5.857-5.858,15.355,0,21.213l80.333,80.333c2.929,2.929,6.768,4.393,10.606,4.393
+                        c3.838,0,7.678-1.465,10.606-4.393l143.066-143.066C384.163,189.215,384.163,179.717,378.305,173.859z"/>
+                </g>
+            </g>
+        </symbol>
+
+        <symbol id="arr" viewBox="0 0 512.002 512.002">
+            <g>
+                <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+                            L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+                            l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <div class="form">
+        <div class="container">
+            <div class="form__container">
+                <div class="form__reviews">
+
+                    <button class="reviews__arr" id="reviews__arrow--left">
+                        <svg class="reviews__arr-img">
+                            <use xlink:href="#arr"></use>
+                        </svg>
+                    </button>
+
+                    <div class="reviews__comma">
+                        <img src="assets/img/quotes.png" />
+                    </div>
+
+                    <div class="reviews" id="reviews">
+                        
+                        <div class="reviews__item">
+                            
+                            <div class="reviews__text">Мамси, спасибо Вам огромное за такие красивые платья!
+                                Сегодня получила новенькое платьице. Боже мой как оно мне понравилось...
+                                какое красивое.. и ведь платье совсем не дорогое! Спасибо</div>
+                            <div class="reviews__person">
+                                <img class="reviews__person-photo" src="assets/img/person.png" />
+                                <div class="reviews__person-info">
+                                    <div class="reviews__person-name">Алла г. Москва</div>
+                                    <div class="reviews__person-date">с нами 4 года, 3 месяца, 65 заказов</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews__item">
+                            <div class="reviews__text">Все что я заказывала на сайте все просто супер!
+                                Вещи отличные. Заказала сыну куртку steen age очень довольна, она офигенная,
+                                с кучей карманов, даже с термометром)))) и скидка была 70%.</div>
+                            <div class="reviews__person">
+                                <img class="reviews__person-photo" src="assets/img/person2.png" />
+                                <div class="reviews__person-info">
+                                    <div class="reviews__person-name">Мария г. Барнаул</div>
+                                    <div class="reviews__person-date">с нами 2 года, 4 месяца, 32 заказа</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews__item">
+                            <div class="reviews__text">Добрый день, Мамси! Спасибо за заказ номер 1703226!
+                                Уютное постельное белье дарит нам прекрасные сны! А валеночки для лапочки-дочки
+                                просто чудо! Теплые, мягкие! СПАСИБО, МАМСИ, ЧТО ТЫ ЕСТЬ!</div>
+                            <div class="reviews__person">
+                                <img class="reviews__person-photo" src="assets/img/person3.png" />
+                                <div class="reviews__person-info">
+                                    <div class="reviews__person-name">Елена г. Санкт-Петербург</div>
+                                    <div class="reviews__person-date">с нами 5 лет, 1 месяц, 535 заказов</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews__item">
+                            <div class="reviews__text">Здравствуйте, Mamsy! Вчера получила первый заказ! Дочке зимний
+                                комплект, себе платье! Мне очень понравилось! Качество супер! Размер в точку! И цена
+                                радует! Буду заказывать ещё! Спасибо!</div>
+                            <div class="reviews__person">
+                                <img class="reviews__person-photo" src="assets/img/person4.png" />
+                                <div class="reviews__person-info">
+                                    <div class="reviews__person-name">Ольга г. Новосибирск</div>
+                                    <div class="reviews__person-date">с нами 1 месяц, 1 заказ</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews__item">
+                            <div class="reviews__text">Только что получила свой большой заказ. Накопила
+                                баллов и потратила на 50% скидку. Коробка еле прошла в дверь. Вещи
+                                подошли отлично. Мамси, огромное спасибо! Не знаю, что бы я без Вас делала.</div>
+                            <div class="reviews__person">
+                                <img class="reviews__person-photo" src="assets/img/person5.png" />
+                                <div class="reviews__person-info">
+                                    <div class="reviews__person-name">Ольга г. Казань</div>
+                                    <div class="reviews__person-date">с нами 4 года, 3 месяца, 455 заказов</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <button class="reviews__arr" id="reviews__arrow--right">
+                        <svg class="reviews__arr-img">
+                            <use xlink:href="#arr"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="auth">
+                <div class="auth__logo">
+                    <img src="assets/img/logo.svg"/>
+                </div>
+                <div class="auth__text">
+                    <span class="auth__text-pink">11 024 159</span> женщин со всей<br> России уже перестали переплачивать<br> за <span class="auth__text-pink">качественные товары</span> вместе с Mamsy
+                </div>
+                <div class="auth__check check hideCheckFirst">
+                    <div class="check__block">
+                        <div class="check__block-mark">
+                            <svg class="mark">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                        </div>
+                        <div class="check__block-text">Скидки до 70% на товары для всей семьи</div>
+                    </div>
+                    <div class="check__block">
+                        <div class="check__block-mark">
+                            <svg class="mark">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                        </div>
+                        <div class="check__block-text">Топ-бренды со всего мира</div>
+                    </div>
+                    <div class="check__block">
+                        <div class="check__block-mark">
+                            <svg class="mark">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                        </div>
+                        <div class="check__block-text">Тысячи новых товаров каждый день</div>
+                    </div>
+                </div>
+                <form class="auth__form">
+                    <div class="auth__input">
+                        <input class="auth__form-user  fail" placeholder="Введите email"></input>
+                        <span class="fail__comment">Ваш email</span>
+                    </div>
+
+                    <div class="auth__input">
+                        <input class="auth__form-user" placeholder="Придумайте пароль"></input>
+                        <span class="fail__comment  hide">Ваш пароль</span>
+                    </div>
+                    
+                    <button class="auth__form-btn">Войти</button>
+                </form>
+                <a href="#" class="auth__forget">Забыли пароль?</a>
+                <div class="auth__enter">
+                    Ещё не с нами? 
+                    <a href="#" class="auth__enter-register">Вступить в клуб</a>
+                </div>
+                <div class="auth__arrow">
+                    <img src="assets/img/arrow.png" />
+                </div>
+                <div class="auth__logo">
+                    <img class="auth__logo-icon" src="assets/img/vk.svg" alt="">
+                    <img class="auth__logo-icon" src="assets/img/ok.svg" alt="">
+                    <img class="auth__logo-icon" src="assets/img/face.svg" alt="">
+                    <img class="auth__logo-icon" src="assets/img/google.svg" alt="">
+                </div>
+                <div class="auth__check check hideCheck">
+                    <div class="check__block">
+                        <div class="check__block-mark">
+                            <svg class="mark">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                        </div>
+                        <div class="check__block-text">Скидки до 70% на товары для всей семьи</div>
+                    </div>
+                    <div class="check__block">
+                        <div class="check__block-mark">
+                            <svg class="mark">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                        </div>
+                        <div class="check__block-text">Топ-бренды со всего мира</div>
+                    </div>
+                    <div class="check__block">
+                        <div class="check__block-mark">
+                            <svg class="mark">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                        </div>
+                        <div class="check__block-text">Тысячи новых товаров каждый день</div>
+                    </div>
+                </div>
+                <div class="auth__app hideCheck">
+                    <div class="auth__app-title">Мобильное приложение</div>
+                    <div class="auth__app-apps">
+                        <img class="auth__app-store hideCheck" src="assets/img/appStore.png" alt="">
+                        <img class="auth__app-store hideCheck" src="assets/img/googlePlay.png" alt="">
+                    </div>
+                    <a href="" class="auth__app-description hideCheck">О клубе Mamsy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='assets/js/main.js'></script>
+</body>
+</html>

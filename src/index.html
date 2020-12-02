@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/html" href="assets/js/slick/slick-theme.css">
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
     <svg style="display: none;">
@@ -166,18 +167,21 @@
                         <div class="check__block-text">Тысячи новых товаров каждый день</div>
                     </div>
                 </div>
-                <form class="auth__form">
+                <form id="app" class="auth__form" @submit.prevent="checkForm" action="something" method="post" novalidate="true">
                     <div class="auth__input">
-                        <input class="auth__form-user  fail" placeholder="Введите email"></input>
-                        <span class="fail__comment">Ваш email</span>
+                        <input @input="checkEmail" class="auth__form-user" placeholder="Введите email"  type="email" name="email" id="email" v-model="email"></input>
+                        <p v-if="errorsEmail.length">
+                            <span class="fail__comment">{{ errorsEmail[0] }}</span>
+                        </p>
                     </div>
 
                     <div class="auth__input">
-                        <input class="auth__form-user" placeholder="Придумайте пароль"></input>
-                        <span class="fail__comment  hide">Ваш пароль</span>
+                        <input @input="checkPasswordInput" class="auth__form-user" placeholder="Придумайте пароль" type="text" name="password" id="password" v-model="password"></input>
+                        <p v-if="errorsPass.length">
+                            <span class="fail__comment-password">{{ errorsPass[0] }}</span>
+                        </p>
                     </div>
-                    
-                    <button class="auth__form-btn">Войти</button>
+                    <button type="submit" class="auth__form-btn">Войти</button>
                 </form>
                 <a href="#" class="auth__forget">Забыли пароль?</a>
                 <div class="auth__enter">
@@ -187,7 +191,7 @@
                 <div class="auth__arrow">
                     <img src="assets/img/arrow.png" />
                 </div>
-                <div class="auth__logo">
+                <div class="auth__logo hideCheck">
                     <img class="auth__logo-icon" src="assets/img/vk.svg" alt="">
                     <img class="auth__logo-icon" src="assets/img/ok.svg" alt="">
                     <img class="auth__logo-icon" src="assets/img/face.svg" alt="">

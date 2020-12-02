@@ -21,13 +21,13 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
     margin: 0;
 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-family: 'Verdana';
 
     background-color: black;
 }
 
+@import "blocks/vendor/slick.scss";
 @import "blocks/reviews";
 @import "blocks/container";
 @import "blocks/auth";
-@import "blocks/vendor/slick.scss";
+@import "blocks/fonts";
